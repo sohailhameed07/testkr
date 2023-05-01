@@ -1,0 +1,268 @@
+body {
+    background-color: #A5C9CA;
+    
+  }
+  header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #395B64;
+	height: 50px;
+}
+
+header .logo {
+	font-size: 15px;
+	font-family: Verdana, sans-serif;
+	color: white;
+	text-decoration: none;
+	margin-left: 30px;
+}
+
+.nav-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-decoration: none;
+	/* margin-left: ; */
+	margin-right: 21px;
+}
+
+.nav-items a {
+	display: block;
+	margin-right: 25px;
+	margin-bottom: 0px !important;
+	text-decoration: none;
+  color: white;
+
+}
+
+figure {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-top: 50px; */
+	/* margin-bottom: 50px; */
+	/* padding: 10px; */
+	margin: 0 !important;
+	width: 30%;
+	height: 100%;
+}
+
+
+.img1 {
+	border-radius: 50%;
+	width: 230px;
+	height: 230px;
+}
+
+.flex-img {
+	height: 150px;
+	/* width: px; */
+	width: 200px;
+	margin-right: 57px;
+	margin-bottom: 5%;
+}
+
+
+article {
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* width: ; */
+	height: 244px;
+}
+
+.about-me p {
+  font-size: 18px;
+}
+.third-section {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.right-flex {
+	width: 50%;
+	/* margin-right: 10%; */
+}
+.left-flex  {
+	width: 50%;
+	margin-left: 13%;
+	margin-top: 150px;
+}
+
+  article div{
+      width: 35%;
+  }
+
+  blockquote {
+    font-style: italic;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  nav h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav a {
+    display: block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  nav a img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+.achievements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 80px;
+}
+
+.achievements .work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.achievements .work i {
+  width: fit-content;
+  font-size: 50px;
+  color: #333333;
+  border-radius: 50%;
+  border: 2px solid #333333;
+  padding: 12px;
+}
+
+.achievements .work .work-heading {
+  font-size: 25px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.achievements .work .work-text {
+  font-size: 20px;
+  color: #0f0e0e;
+  margin: 10px 0;
+}
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: ""; 
+  display: block; 
+  height: 2px;
+  width: 100%; 
+  background-color: #000;
+  position: absolute;
+  bottom: 0; 
+  left: 0; 
+  transform: scaleX(0); 
+  transition: transform 0.2s ease-in-out; 
+}
+
+a:hover::after {
+  transform: scaleX(1); 
+}
+
+form {
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #395B64;
+  border-radius: 10px;
+  color: white;
+}
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+form input[type="text"], form input[type="email"], form input[type="tel"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+}
+form textarea {
+  width: 95%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+}
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+table {
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto;
+  background-color: #2C3333;
+  color: #A5C9CA;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #0d0505;
+}
+
+th {
+  background-color: #395B64;
+  font-weight: bold;
+}
+
+audio, video {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.motto {
+  margin: 20px 0;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #395B64;
+}
+

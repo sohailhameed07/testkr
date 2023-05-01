@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Home Page</title>
+  <link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="style/style1.css">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">My Personal Homepage</a>
+    <nav class="nav-items">
+      <a href="#">Home</a>
+      <a href="About.html">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#form">Feedback</a>
+    </nav>
+  </header>
+
+
+
+  <section>
+    <article>
+      <div class="motto">
+        <aside>
+          <h2>Welcome to My Homepage</h2>
+        </aside>
+      </div>
+
+      <figure>
+        <img class="img1" src="myprofile.png" alt="Profile Image">
+      </figure>
+    </article>
+    <div class="about-me">
+      <p> Hi, I am Mohammed and I am 27-year-old studying Masters in Computer Science with a keen interest in becoming a web developer and cloud architect.
+    I have a passion for table tennis and enjoys watching cricket in my spare time. While I haven't had the opportunity to work on any projects yet,
+    I am eager to gain experience and put my skills to the test. With my dedication and love for the field, I am sure that I'd make a valuable contribution to the world of web development and cloud architecture.</p>
+    </div>
+
+    <div class="life-motto">
+      <h3>My Life's Motto is</h3>
+        <blockquote cite="https://en.wikipedia.org/wiki/Motto">
+          <p>“Don't be pushed by your problems. Be led by your dreams.” <br>- Ralph Waldo Emerson</p>
+        </blockquote>
+    </div>
+    
+<h3><a href="About.html"> Click Here</a> to know more about me and view some of the memories that I want to share with you.</h3>
+
+<h3>Want to play a quick tic tac toe game?<a href="#game"> Click Here</a></h3>
+
+<h3>My schedule for spring semester</h3>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>12:00 - 13:00</td>
+    <td>Special Topics: Computer Security</td>
+    <td> </td>
+    <td>Special Topics: Computer Security</td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  
+  <tr>
+    <td>14:00 - 15:00</td>
+    <td>Special Topics: Web Application Development</td>
+    <td> </td>
+    <td>Special Topics: Web Application Development</td>
+    <td> </td>
+    <td>Special Topics: Web Application Development</td>
+  </tr>
+  <tr>
+    <td>16:00 - 17:00</td>
+    <td>Autonomous Mobile Robots</td>
+    <td> </td>
+    <td>Autonomous Mobile Robots</td>
+    <td> </td>
+    <td> </td>
+</tr>
+</table>
+
+
+  
+<section>
+<div id="game">
+        <h1 class="game--title">Tic Tac Toe</h1>
+        <div class="game--container">
+            <div data-cell-index="0" class="cell"></div>
+            <div data-cell-index="1" class="cell"></div>
+            <div data-cell-index="2" class="cell"></div>
+            <div data-cell-index="3" class="cell"></div>
+            <div data-cell-index="4" class="cell"></div>
+            <div data-cell-index="5" class="cell"></div>
+            <div data-cell-index="6" class="cell"></div>
+            <div data-cell-index="7" class="cell"></div>
+            <div data-cell-index="8" class="cell"></div>
+            <div data-cell-index="9" class="cell"></div>
+            <div data-cell-index="10" class="cell"></div>
+            <div data-cell-index="11" class="cell"></div>
+            <div data-cell-index="12" class="cell"></div>
+            <div data-cell-index="13" class="cell"></div>
+            <div data-cell-index="14" class="cell"></div>
+            <div data-cell-index="15" class="cell"></div>
+        </div>
+        <h2 class="game--status"></h2>
+        <button class="game--restart">Restart Game</button>
+</div>
+    </section>
+
+
+<div id="form" action="/submit-feedback" method="POST">>
+    <form>
+      <h3>Please Share Your Feedback To Receive a Surprise.</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="5" required></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+  </section>
+  <footer>
+    <p>Made by Mohammed Hassan Ali(856519156)</p>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.querySelector('#name').value;
+      const email = document.querySelector('#email').value;
+      const phone = document.querySelector('#phone').value;
+      const comments = document.querySelector('#comments').value;
+
+      if (!name || !email || !phone || !comments) {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+
+if(!alert("Thank you for sharing your feedback. Now click on OK button for Surprise")) location.href = 'surprise boxes.html';
+    });
+
+
+
+
+
+
+const statusDisplay = document.querySelector('.game--status');
+
+let gameActive = true;
+let currentPlayer = "X";
+let gameState = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+
+const winningMessage = () => `Player ${currentPlayer} has won!`;
+const drawMessage = () => `Game ended in a draw!`;
+const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
+
+statusDisplay.innerHTML = currentPlayerTurn();
+
+const winningConditions = [
+    [0, 1, 2],
+    [1, 2, 3],
+    [4, 5, 6],
+    [5, 6, 7],
+    [8, 9, 10],
+    [9, 10, 11],
+    [12, 13, 14],
+    [13, 14, 15],
+    [8, 5, 2],
+    [3, 6, 9],
+    [6, 9, 12],
+    [7, 10, 13],
+    [0, 4, 8],
+    [4, 8, 12],
+    [1, 5, 9],
+    [5, 9, 13],
+    [2, 6, 10],
+    [6, 10, 14],
+    [3, 7, 11],
+    [7, 11, 15],
+    [1, 6, 11],
+    [0, 5, 10],
+    [5, 10, 15],
+    [4, 9, 14]
+];
+
+function handleCellPlayed(clickedCell, clickedCellIndex) {
+    gameState[clickedCellIndex] = currentPlayer;
+    clickedCell.innerHTML = currentPlayer;
+}
+
+function handlePlayerChange() {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusDisplay.innerHTML = currentPlayerTurn();
+}
+
+function handleResultValidation() {
+    let roundWon = false;
+    for (let i = 0; i <= 23; i++) {
+        const winCondition = winningConditions[i];
+        let a = gameState[winCondition[0]];
+        let b = gameState[winCondition[1]];
+        let c = gameState[winCondition[2]];
+        if (a === '' || b === '' || c === '') {
+            continue;
+        }
+        if (a === b && b === c) {
+            roundWon = true;
+            break
+        }
+    }
+
+    if (roundWon) {
+        statusDisplay.innerHTML = winningMessage();
+        gameActive = false;
+        return;
+    }
+
+    let roundDraw = !gameState.includes("");
+    if (roundDraw) {
+        statusDisplay.innerHTML = drawMessage();
+        gameActive = false;
+        return;
+    }
+
+    handlePlayerChange();
+}
+
+function handleCellClick(clickedCellEvent) {
+    const clickedCell = clickedCellEvent.target;
+    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
+
+    if (gameState[clickedCellIndex] !== "" || !gameActive) {
+        return;
+    }
+
+    handleCellPlayed(clickedCell, clickedCellIndex);
+    handleResultValidation();
+}
+
+function handleRestartGame() {
+    gameActive = true;
+    currentPlayer = "X";
+    gameState = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    statusDisplay.innerHTML = currentPlayerTurn();
+    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
+}
+
+
+document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
+document.querySelector('.game--restart').addEventListener('click', handleRestartGame);
+ 
+
+
+  </script>
+
+</body>
+
+</html>
